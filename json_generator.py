@@ -98,6 +98,7 @@ def get_endpoints_data(ENDPOINTS):
     my_dict["/users.json"]=get_request("/users.json",1).json()
     return my_dict
 
-my_dict=get_endpoints_data(ENDPOINTS)
-with open("responses.json","w") as f:
-    json.dump(my_dict,f)
+if __name__=="__main_":
+    my_dict=get_endpoints_data(ENDPOINTS)
+    with open("responses.json","w") as f:
+        json.dump(my_dict,f)
